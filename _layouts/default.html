@@ -36,7 +36,7 @@
 						{% assign tags = site.tags | sort %}
 						{% for tag in tags %}
 							<li>
-								tag
+								tag[0] tag[1]
 								<a href="/tags/{{ tag | first | slugify }}/" title="{{ tag[0] | replace:'-', ' ' }}">
 									<img src="/assets/img/folder.ico" />{{ tag[0] | replace:'-', ' ' }}</a>
 							</li>
