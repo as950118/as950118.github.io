@@ -71,14 +71,33 @@ require
 해당 코드에서는 express를 불러오고  
 express method를 app에 불러왔다.
 
+app.listen(3000, function(){})
+- 포트에 연결하는 코드이다. local에서 진행하므로 3000 포트를 사용하였다.
+
 app.locals.pretty = true
 - pug라는 module을 이용할 때 코드가 가독성이 좋게 출력된다.  
-이에 앞서 pug에 대한 설명이 필요할 듯 하다.
+이에 앞서 pug에 대한 설명이 필요하다면 하단의 링크로 들어가자.
 [pug](.2018-02-04-NodeJs-pug.md) <- link
 
 app.set('view engine', 'pug')
-- app의 view engine을 pug로 사용하겠다는 의미이다.
+- app의 view engine을 pug로 사용하겠다는 의미이다.  
+이에 앞서 set에 대한 설명이 필요하다면 하단의 링크로 들어가자.
 [set에 관한 설명]()
 
 app.use(express.static('public'))
+- 문법은 규칙이다. 의미는 해당 디렉터리의 public이라는 디렉터리에서 문서등을 가져온다는 것이다.
 
+---
+
+
+app.get('/form', function(req, res){
+	req.render('form')
+})
+- 본격 적으로 get이 등장하였다.  
+하지만 get이 뭔지 function은 뭐고 render는 무엇인지 감이 잘 오지 않을 것이다.  
+하나씩 보도록 하자.
+- app.get : 
+- '/form' : form이라는 디렉터리에서 가져온다는 의미이다. 본인은 form이라는 디렉터리를 사용하였기 때문이고 원한다면 다른 디렉터리을 사용해도 좋다.
+- 'function(req, res) : call back method이다. call back method에 대한 설명이 필요하다면 하단의 링크로 들어가자.  
+[call back]()
+- req.render('form') : 
