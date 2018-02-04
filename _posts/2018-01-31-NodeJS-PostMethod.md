@@ -1,5 +1,6 @@
 ---
 layout : default
+title : NodeJs-Post
 tags : NodeJS
 ---
 ## post 방식
@@ -20,3 +21,5 @@ app.post('/topic', function(req, res){
 })
 ```
 
+req.body.title
+req라는 객체의 body 프로퍼티의 title 프로퍼티를 가져온다
