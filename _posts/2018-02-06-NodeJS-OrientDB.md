@@ -46,11 +46,11 @@ SCHEMA에서는 일반적으로 DB에서 말하는 table과 같은 역할을 하
 
 그러면 Schema에서 Class를 추가해보자.
 
-Generic Class에서 ** NEW GENERIC ** 을 해보자.
+Generic Class에서 **NEW GENERIC** 을 해보자.
 
 이름은 진행하는 프로젝트에 맞춰 topic으로 정한다.
 
-그리고 ** NEW PROPERTY ** 를 해보자.
+그리고 **NEW PROPERTY** 를 해보자.
 
 가장 먼저 title이라는 이름의 property를 생성하자.
 
@@ -74,12 +74,28 @@ mandatory는 필수적으로 입력해야 하는 항목일때 지정해 주는 �
 
 들어가보면 방금 설정한 Properties와 기타 여러가지 것들이 보일 것이다.
 
-그러면 이제 ** NEW RECRODE ** 를 해보자.
+그러면 이제 **NEW RECRODE** 를 해보자.
+
+
+
+
+https://github.com/orientechnologies/orientjs로 접속해서 JS로 다뤄보자.
+
+npm install orientjs -- save
+
+http://orientdb.com/docs/last/OrientJS-Server.html 을 참조해서 코드 작성
+
+@rid 값을 참조해서 코드작성
 
 
 
 
 
+web app 만들기
 
-MongdoDB의 속성에서 autoIndex가 없어짐
+@rid는 특수문자때문에 topic['@rid]
+'#'은 url에서 사용할수 없으므로
+pug에서는 '-'뒤에 나오는 문자열을 javascript로 처리
 
+'- rid = encodeURIComponent(topic['@rid])'
+a(href='/topic/)+rid)=topic.title
