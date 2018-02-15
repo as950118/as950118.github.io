@@ -1,6 +1,6 @@
 ---
 layout:default
-tags:NodeJS, OrientDB
+tags:NodeJS
 title:NodeJS-WebApp
 ---
 

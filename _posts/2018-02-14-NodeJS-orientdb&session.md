@@ -1,6 +1,6 @@
 ---
 layout : default
-tags : NodeJS, OrientDB, Session
+tags : NodeJS
 title : NodeJS-OrienDB & Session
 ---
 
