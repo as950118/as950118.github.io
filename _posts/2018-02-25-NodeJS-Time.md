@@ -1,7 +1,7 @@
 ---
-layout:default
-tags:Nodejs
-title:Nodejs-Time
+layout : default
+tags : NodeJS
+title : NodeJS-Time
 ---
 
 #Nodejs - Time <hr>
