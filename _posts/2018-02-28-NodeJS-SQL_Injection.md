@@ -70,8 +70,8 @@ passport.use(new LocalStrategy(
       var filter = userdata.id.split('')
       for(var i in filter){
       	if(filter[i]==="'"||filter[i]==='"'filter[i]==="="||filter[i]==="<"||filter[i]===">"){
-        	console.log('XSS')
-        	res.redirect('/login')
+        	console.log('SQL INJDECTION')
+        	return done(null, false)
         }
       }
       var sql = 'SELECT * FROM log WHERE id=:id'
@@ -93,6 +93,16 @@ passport.use(new LocalStrategy(
     }
   ))
 ```
+
+로그인을 해보자.
+
+ID와 PW에 1 or 1=1을 넣어서 실행해보자.
+
+해당 코드에서는 이미 hash와 salt를 이용한 암호화를 하였고
+
+SQL문 자체도 해당 SQL injection에 대한 취약점을 보이지 않기 때문에 저러한 코드를 삽입하지 않더라도 큰 문제점은 없다.
+
+하지만 어떻게 방지할 수 있는지에 대해 설명하기 위함이었으므로 그러하게 이해하면 될 것이다.
 
 ##결론
 
