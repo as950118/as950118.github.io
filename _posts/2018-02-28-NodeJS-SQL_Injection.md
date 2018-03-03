@@ -1,7 +1,7 @@
 ---
 layout : default
 tags : NodeJS
-title : NodeJS-XSS
+title : NodeJS-SQL_Injection
 ---
 
 #Nodejs-SQL_Injection
@@ -10,7 +10,7 @@ title : NodeJS-XSS
 
 SQL문의 허점을 이용한 해킹 기법이다.
 
-쉽게 예를 들어보면 `SELECT FROM db WHERE id=:A` 같은 SQL문이 있다고 가정해보자.
+쉽게 예를 들어보면 ```SELECT FROM db WHERE id=:A``` 같은 SQL문이 있다고 가정해보자.
 
 이런 경우 A에 `1 or 1=1`라는 값이 입력되게 되면,
 
@@ -60,30 +60,34 @@ connection.query(sql, function (error, results, fields) {
 
 ###OrientDB
 
-```
+```{javascrinpt}
 passport.use(new LocalStrategy(
     function(username, password, done){
+    //추가된부분
+    
       var userdata = {
         id:username,
         pw:password
       }
       var filter = userdata.id.split('')
       for(var i in filter){
-      	if(filter[i]==="'"||filter[i]==='"'filter[i]==="="||filter[i]==="<"||filter[i]===">"){
+      if(filter[i]==="'"||filter[i]==='"'filter[i]==="="||filter[i]==="<"||filter[i]===">"){
         	console.log('SQL INJDECTION')
         	return done(null, false)
         }
       }
+      //위에 까지
+      
       var sql = 'SELECT * FROM log WHERE id=:id'
       db_log.query(sql, {params:{id:userdata.id}})
       .then(function(results){
         if(results.length === 0){
-          return done(null, false) //fail
+          return done(null, false)
         }
         var user = results[0]
         return hasher({password:userdata.pw, salt:user.salt}, function(err, pass, salt, hash){ //
           if(hash === user.pw){
-            done(null, user) //success
+            done(null, user)
           }
           else{
             done(null, false)
