@@ -23,7 +23,7 @@ NodeJS를 공부하다보면 코드를 추가하거나 삭제하는 등 수정�
 4. 그 후 node '파일명'이 아닌 supervisor '파일명'을 이용하면 된다.
 
 
-##Jade
+## Html2Jade
 
 html 코드를 pug 형태로 바꿔주는 방법이 있다.
 

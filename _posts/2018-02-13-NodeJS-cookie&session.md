@@ -23,7 +23,7 @@ cookie를 생성하는 부분은 res.cookies( , {signed:true}) 로 수정
 
 **user와 server의 저장공간을 적절히 사용하는 session을 이용하는게 더 안전함**
 
-###cookie_counter.js
+### cookie_counter.js
 ```{javascript}
 var express = require('express')
 var cookieParser = require('cookie-parser')
@@ -120,11 +120,11 @@ connect.sid처럼 나타날 것이다
 
 session은 직접 data를 저장하는 것이 아니라 id만을 저장한다는 것을 알수 있다.
 
-##설치
+## 설치
 
 npm install express-session --save
 
-###session_counter.js
+### session_counter.js
 ```{javascript}
 var express = require('express')
 var session = require('express-session')

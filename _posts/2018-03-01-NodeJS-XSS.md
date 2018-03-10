@@ -4,9 +4,9 @@ tags : NodeJS
 title : "NodeJS-XSS"
 ---
 
-#Nodejs-XSS
+# Nodejs-XSS
 
-##XSS란?
+## XSS란?
 
 Cross-site scripting의 줄임말이다.
 
@@ -16,21 +16,21 @@ web app에서 많이 발생되는 문제이다.
 
 NodeJS에서는 XSS 모듈을 이용해 쉽게 방지할 수 있다.
 
-##설치
+## 설치
 
 npm install xss --save
 
 
-##코드
+## 코드
 
-###Javascript
+### Javascript
 ```{javascript}
 var xss = require('xss')
 var html = xss('<script>alert('XSS')</script>')
 console.log(html)
 ```
 
-###html
+### html
 ```{html}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-xss/0.3.3/xss.min.js"></script>
 <script>
@@ -43,6 +43,6 @@ alert(html);
 
 또 xss 모듈을 사용하지 않고 `<script>...`를 하였을 경우 어떻게 실행되는지를 비교해보자.
 
-##결론
+## 결론
 
 NodeJS의 모듈을 참 편리하다

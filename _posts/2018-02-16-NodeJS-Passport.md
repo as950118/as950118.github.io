@@ -4,12 +4,12 @@ tags : NodeJS
 title : NodeJS-Passport
 ---
 
-#Passport
+# Passport
 ---
 
 로그인을 하다보면 facebook, naver 등을 이용한 로그인등이 있을 것이다.
 
-##설치
+## 설치
 
 npm install passport --save
 

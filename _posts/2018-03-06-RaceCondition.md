@@ -1,18 +1,10 @@
 ---
-<<<<<<< HEAD:_posts/2018-03-06-RaceCondition.md
-
-=======
->>>>>>> 680ddcf09f3a436e3a6212fb694844525c9a1341:_posts/2018-03-06-Race_Condition.md
 layout : default
 title : "Race_Condition"
 tags : LinuxUnix
 
 ---
 
-<<<<<<< HEAD:_posts/2018-03-06-RaceCondition.md
-=======
-
->>>>>>> 680ddcf09f3a436e3a6212fb694844525c9a1341:_posts/2018-03-06-Race_Condition.md
 # Race Condition을 이용한 해킹 기법
 
 ## Race Condition이란?
@@ -27,7 +19,7 @@ tags : LinuxUnix
 void main(void){
 	int childpid;
     static int a;
-    
+
     if((childpid = fork()) > 0){
     	for(a; a<100; a++){
         	if(a%2 == 0){
