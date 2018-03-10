@@ -1,10 +1,10 @@
 ---
 layout:default
 tags:LinuxUnix
-title:Race_Condition
+title:"Race_Condition"
 ---
 
-# Rae Condition을 이용한 해킹 기법
+# Race Condition을 이용한 해킹 기법
 
 ## Race Condition이란?
 
