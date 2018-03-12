@@ -1,7 +1,7 @@
 ---
 layout : default
 title : "Algorithm-tutorial"
-tags : Algoristhm
+tags : Algorithm
 ---
 
 # Algorism-tutorial
