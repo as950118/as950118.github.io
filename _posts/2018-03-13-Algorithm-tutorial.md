@@ -12,11 +12,11 @@ tags : Algorithm
 
 ---
 
-1. [문제 풀이 사이트](site)
-2. [팁](tip)
-3. [문제 해결 방법](resolve)
-4. [문제 해결 방법2](resolve2)
-5. [주의점](warning)
+1. [문제 풀이 사이트](#site)
+2. [팁](#tip)
+3. [문제 해결 방법](#resolve)
+4. [문제 해결 방법2](#resolve2)
+5. [주의점](#warning)
 
 
 <div id="site">
