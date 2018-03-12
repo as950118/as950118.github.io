@@ -9,3 +9,6 @@ Python:
 
 LinuxUnix:
   name: LinuxUnix
+
+Algorithm:
+  name: Algorithm
