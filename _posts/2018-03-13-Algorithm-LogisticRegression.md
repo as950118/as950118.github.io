@@ -262,7 +262,7 @@ print("\nhypothesis : ", h, "\ncorrect : ", c, "\naccuracy : ", a);
 
 ---
 
-<div id="reduce"><div>
+<div id="reduce"></div>
 여담이지만 reduce_mean이나 sum에서 **reduce**가 붙는 이유를 이야기하자면 좀 긴데, 먼저 파이썬 내장 함수중 reduce에 대해 알아야 합니다.
 
 reduce는 원소를 프로그래밍된 대로 순차적으로 처리하는 함수입니다.
