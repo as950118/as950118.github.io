@@ -1,7 +1,7 @@
 ---
 layout : default
 title : "AWS_NodeJS_Connection"
-tags : Nodejs
+tags : NodeJS
 ---
 
 # AWS NodeJS 연동
