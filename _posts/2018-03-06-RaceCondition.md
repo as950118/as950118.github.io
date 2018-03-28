@@ -13,14 +13,17 @@ tags : LinuxUnix
 
 먼저 아래 코드를 보도록 하겠습니다.
 
+**윈도우에서는 실행되지 않고 리눅스 환경에서만 실행됩니다.**
+
 ```{c}
 #include<stdio.h>
+#include<unistd.h>
 
 void main(void){
 	int childpid;
     static int a;
-
-    if((childpid = fork()) > 0){
+	childpid = fork();
+    if(childpid) > 0){
     	for(a; a<100; a++){
         	if(a%2 == 0){
             	printf("O");
@@ -38,6 +41,8 @@ void main(void){
     }
 }
 ```
+
+**윈도우에서는 실행되지 않고 리눅스 환경에서만 실행됩니다.**
 
 fork()란 동일한 작업을 하는 프로세스를 하나 더 실행하는 함수입니다.
 
