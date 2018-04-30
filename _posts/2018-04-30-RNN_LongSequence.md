@@ -24,7 +24,7 @@ tags : Algorithm
 
 ---
 
-```hihello``` 짧은 문장에서는 문제가 없지만
+*hihello* 짧은 문장에서는 문제가 없지만
 
 책이나 긴 글 같은 경우에는 각각의 문자를 직접 입력할 수는 없습니다.
 
@@ -56,8 +56,8 @@ x_data = [sample_idx[:-1]] #처음 부터 마지막-1 까지
 y_data = [sample_idx[1:]] #처음 +1 부터 마지막 까지
 ```
 
-X Data 는 ```if you want yo``` ,
-Y Dtat 는 ```f you want you``` 가 됩니다.
+X Data 는 *if you want yo* ,
+Y Dtat 는 *f you want you* 가 됩니다.
 
 <br>
 
@@ -90,7 +90,7 @@ sequence_length = len(sample) - 1
 
 각각이 의미하는 바가 무엇인지 안다면 왜 저렇게 이루어지는지 쉽게 알 수 있습니다.
 
-Sequence Length는 ```if you want yo``` 이므로 -1을 해주었습니다.
+Sequence Length는 *if you want yo* 이므로 -1을 해주었습니다.
 
 <br>
 
@@ -176,6 +176,6 @@ with tf.Session() as sess:
 
 이로써 잘 학습되었다는 사실을 알 수 있습니다.
 
-더 긴 문장도 단순히 삽입하기만 하면 됩니다.
+하지만 더 긴 문장에서는 오류가 발생하기도 합니다.
 
-물론 학습하는 횟수도 늘려줘야합니다.
+그에 관해서는 다음시간에 진행하도록 하겠습니다.
