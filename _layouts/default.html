@@ -84,6 +84,9 @@
 			<div class="post_content">
         		{{ content }}
 				{% if page.title %}
+
+					{% include topbar.html %}
+
 					{% include donate.html %}
 				{% endif %}
 			</div>
